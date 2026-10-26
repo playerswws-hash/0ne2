@@ -1,0 +1,9 @@
+Package: com.local.anispeed
+Name: AniSpeed
+Version: 0.3.0
+Architecture: iphoneos-arm64
+Description: Network speed, battery percent and long-press respring plate (experimental)
+Maintainer: me
+Author: me
+Section: Tweaks
+Depends: firmware (>= 15.0), mobilesubstrate
