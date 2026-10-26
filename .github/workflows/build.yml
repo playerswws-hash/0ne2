@@ -18,12 +18,15 @@ jobs:
           git clone --recursive https://github.com/theos/theos.git "$HOME/theos"
           echo "THEOS=$HOME/theos" >> "$GITHUB_ENV"
 
-      - name: Build every zip project
+      - name: Build all projects
         run: |
           for z in *.zip; do
-            unzip -q "$z"
-            d="${z%.zip}"
-            (cd "$d" && make package)
+            if [ -e "$z" ]; then unzip -qo "$z"; fi
+          done
+          for d in */; do
+            if [ -f "$d/Makefile" ]; then
+              (cd "$d" && make package)
+            fi
           done
 
       - name: Upload deb files
