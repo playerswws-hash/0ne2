@@ -1,0 +1,9 @@
+Package: com.local.islandclone
+Name: IslandClone
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: Dynamic Island-style pill for notched iPhones
+Maintainer: you
+Author: you
+Section: Tweaks
+Depends: mobilesubstrate
